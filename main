@@ -1,0 +1,77 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleУкраїнський ресторанtitle
+    link rel=stylesheet href=styles.css
+head
+body
+    header
+        h1Український ресторанh1
+        nav
+            ul
+                lia href=#menuМенюali
+                lia href=#reservationБронированиеali
+                lia href=#contactКонтактыali
+                lia href=#feedbackОбратная связьali
+            ul
+        nav
+    header
+    
+    section id=menu
+        h2Наше менюh2
+        ul
+            liПельмениli
+            liВареникиli
+            liУкраинский борщli
+            liДеревенские блиныli
+        ul
+    section
+    
+    section id=reservation
+        h2Бронирование столиковh2
+        form id=booking-form
+            label for=nameИмяlabel
+            input type=text id=name required
+            
+            label for=dateДатаlabel
+            input type=date id=date required
+            
+            label for=timeВремяlabel
+            input type=time id=time required
+            
+            button type=submitЗабронироватьbutton
+        form
+    section
+    
+    section id=contact
+        h2Контактная информацияh2
+        pАдрес Киев, ул. Шевченко, 12p
+        pТелефон +380 44 123 4567p
+        pEmail info@ukrainian-restaurant.comp
+        a href=httpswww.ubereats.com target=_blankЗаказать через Uber Eatsa
+    section
+    
+    section id=feedback
+        h2Обратная связьh2
+        form id=feedback-form
+            label for=messageВаш отзывlabel
+            textarea id=message requiredtextarea
+            button type=submitОтправитьbutton
+        form
+    section
+    
+    script
+        document.getElementById(booking-form).addEventListener(submit, function(event) {
+            event.preventDefault();
+            alert(Столик забронирован!);
+        });
+        
+        document.getElementById(feedback-form).addEventListener(submit, function(event) {
+            event.preventDefault();
+            alert(Спасибо за ваш отзыв!);
+        });
+    script
+body
+html
